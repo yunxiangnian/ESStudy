@@ -205,7 +205,7 @@ public class ESClient_Doc_Query {
         request.indices("user");
 
         SearchSourceBuilder builder = new SearchSourceBuilder();
-        /**对age字段取最大值*/
+        /**对age字段分组查询*/
         AggregationBuilder aggregationBuilder = AggregationBuilders.terms("ageGroup").field("age");
 
         builder.aggregation(aggregationBuilder);
